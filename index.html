@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Advanced Multi-Tool Web App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div>
+        <h1>Advanced Multi-Tool Web App</h1>
+        <p>To-Do • Weather • Chat • Portfolio Dashboard</p>
+      </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <div class="tabs">
+      <div class="tab active" data-tab="todo">To-Do</div>
+      <div class="tab" data-tab="weather">Weather</div>
+      <div class="tab" data-tab="chat">Chat</div>
+      <div class="tab" data-tab="portfolio">Portfolio</div>
+    </div>
+
+    <!-- Panels -->
+    <section id="todo" class="panel" data-panel>
+      <input id="newTask" placeholder="Add new task" />
+      <button id="addTaskBtn">Add</button>
+      <div id="todoList"></div>
+    </section>
+
+    <section id="weather" class="panel" data-panel hidden>
+      <input id="cityInput" placeholder="City" />
+      <button id="fetchWeather">Get Weather</button>
+      <div id="weatherContent"></div>
+    </section>
+
+    <section id="chat" class="panel" data-panel hidden>
+      <div id="messages" class="messages"></div>
+      <input id="chatInput" placeholder="Type a message" />
+      <button id="sendMsg">Send</button>
+    </section>
+
+    <section id="portfolio" class="panel" data-panel hidden>
+      <canvas id="activityChart" width="800" height="160"></canvas>
+    </section>
+
+    <footer>Built with HTML • CSS • JS</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
